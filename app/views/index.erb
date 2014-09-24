@@ -1,34 +1,34 @@
 <div class="container">
 
-  <header class="page-header">
+  <header class="page-header text-center">
     <h1>Arabic Verb Conjugator</h1>
   </header>
 
   <div class="row">
-    <form id="conj-form" class="form-inline" role="form">
+    <form id="conj-form" role="form">
 
-      <div class="col-xs-3">
+      <div class="col-xs-4">
         <label>Root 3</label>
         <select class="form-control" name="root3">
           <%= erb :'partials/_alphabet', :layout => false, :locals => { :selected  => @root1, :stuff => @stuff } %>
         </select>
       </div>
 
-      <div class="col-xs-3">
+      <div class="col-xs-4">
         <label>Root 2</label>
         <select class="form-control" name="root2">
           <%= erb :'partials/_alphabet', :layout => false, :locals => { :selected => @root2, :stuff => @stuff } %>
         </select>
       </div>
 
-      <div class="col-xs-3">
+      <div class="col-xs-4">
         <label>Root 1</label>
         <select class="form-control" name="root1">
           <%= erb :'partials/_alphabet', :layout => false, :locals => { :selected => @root3, :stuff => @stuff } %>
         </select>
       </div>
 
-      <div class="col-xs-3">
+      <div class="col-s-12 text-center">
         <label>Form</label>
         <select name="form" class="form-control">
           <option>I</option>
@@ -42,12 +42,12 @@
         </select>
       </div>
 
-      <div class="col-xs-3">
+      <div class="col-s-12 text-center">
         <label>Pronoun</label>
         <select name="pronoun" class="form-control">
           <option>I</option>
-          <option>You (f)</option>
-          <option>You (m)</option>
+          <option>You(f)</option>
+          <option>You(m)</option>
           <option>He</option>
           <option>She</option>
           <option>We</option>
@@ -56,7 +56,7 @@
         </select>
       </div>
 
-      <div class="col-xs-3">
+      <div class="col-s-12 text-center">
         <label>Tense</label>
         <select name="tense" class="form-control">
           <option>Past</option>
@@ -64,13 +64,13 @@
         </select>
       </div>
 
-      <div class="col-xs-7">
+      <div class="col-xs-12 text-center submit-button">
        <button type="submit" class="btn btn-info">Conjugate</button>
      </div>
     </form>
   </div>
 
-  <div id="result">
+  <div id="result" class="text-center">
   </div>
 </div>
 

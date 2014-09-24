@@ -1,9 +1,22 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+body {
+  font-family: "Raleway";
+  font-weight: bolder;
+
 }
-th {
-  text-align: left;
+.submit-button {
+  margin-top: 3em;
+}
+
+label {
+  display: inline-block;
+}
+
+select {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+#result {
+  margin-top: 1em;
+  font-size: 3.5em;
 }
