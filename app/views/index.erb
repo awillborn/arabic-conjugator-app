@@ -1,10 +1,72 @@
 <div class="container">
-  <h1>Here are the users:</h1>
 
-  <form method="post" action="/user">
-    Name: <input type = "text" name="name"><br>
-    Email: <input type = "text" name="email"><br>
-    Age: <input type = "text" name="age"><br>
-    <input type = "submit" value="Create a User">
-  </form>
+  <header class="page-header">
+    <h1>Arabic Verb Conjugator</h1>
+  </header>
+
+  <div class="row">
+    <form id="conj-form" class="form-inline" role="form" method="post" action="/conjugate">
+
+      <div class="col-xs-3">
+        <label>Root 3</label>
+        <select class="form-control" name="root3">
+          <%= erb :'partials/_alphabet', :layout => false, :locals => { :selected  => @root1, :stuff => @stuff } %>
+        </select>
+      </div>
+
+      <div class="col-xs-3">
+        <label>Root 2</label>
+        <select class="form-control" name="root2">
+          <%= erb :'partials/_alphabet', :layout => false, :locals => { :selected => @root2, :stuff => @stuff } %>
+        </select>
+      </div>
+
+      <div class="col-xs-3">
+        <label>Root 1</label>
+        <select class="form-control" name="root1">
+          <%= erb :'partials/_alphabet', :layout => false, :locals => { :selected => @root3, :stuff => @stuff } %>
+        </select>
+      </div>
+
+      <div class="col-xs-3">
+        <label>Form</label>
+        <select name="form" class="form-control">
+          <option>I</option>
+          <option>II</option>
+          <option>III</option>
+          <option>IV</option>
+          <option>V</option>
+          <option>VI</option>
+          <option>VII</option>
+          <option>VIII</option>
+        </select>
+      </div>
+
+      <div class="col-xs-3">
+        <label>Pronoun</label>
+        <select name="pronoun" class="form-control">
+          <option>I</option>
+          <option>You</option>
+          <option>He</option>
+          <option>She</option>
+          <option>We</option>
+          <option>You all</option>
+          <option>They</option>
+        </select>
+      </div>
+
+      <div class="col-xs-3">
+        <label>Tense</label>
+        <select name="tense" class="form-control">
+          <option>Past</option>
+          <option>Present</option>
+        </select>
+      </div>
+
+      <div class="col-xs-7">
+       <button type="submit" class="btn btn-info">Conjugate</button>
+     </div>
+    </form>
+  </div>
 </div>
+
