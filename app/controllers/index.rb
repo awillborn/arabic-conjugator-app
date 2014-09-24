@@ -8,7 +8,6 @@ get '/' do
 end
 
 post '/conjugate' do
-  p params
   forms = {
     "I" => "1",
     "II" => "2",
@@ -20,8 +19,16 @@ post '/conjugate' do
     "VIII" => "8", 
     "X" => "10"
   }
-  p forms[params[:form]]
-  p params[:tense].downcase
-  p params[:pronoun].to_sym
-  @verb = Verb.new({root1: params[:root1], root2: params[:root2], root3: params[:root3], form: forms[params[:form]], pronoun: params[:pronoun].downcase.to_sym, tense: params[:tense].downcase}).conjugate
+
+  pronouns = {
+    "I" => :I,
+    "You (f)" => :you_f,
+    "You (m)" => :you_m,
+    "He" => :he,
+    "She" => :she,
+    "We" => :we,
+    "You all" => :you_pl,
+    "They" => :they
+  }
+  @verb = Verb.new({root1: params[:root1], root2: params[:root2], root3: params[:root3], form: forms[params[:form]], pronoun: pronouns[params[:pronoun]], tense: params[:tense].downcase}).conjugate
 end

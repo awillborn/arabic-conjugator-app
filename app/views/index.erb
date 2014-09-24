@@ -5,7 +5,7 @@
   </header>
 
   <div class="row">
-    <form id="conj-form" class="form-inline" role="form" method="post" action="/conjugate">
+    <form id="conj-form" class="form-inline" role="form">
 
       <div class="col-xs-3">
         <label>Root 3</label>
@@ -46,7 +46,8 @@
         <label>Pronoun</label>
         <select name="pronoun" class="form-control">
           <option>I</option>
-          <option>You</option>
+          <option>You (f)</option>
+          <option>You (m)</option>
           <option>He</option>
           <option>She</option>
           <option>We</option>
@@ -68,5 +69,11 @@
      </div>
     </form>
   </div>
+
+  <% if @verb %>
+    <div id="result">
+      <%=@verb%>
+    </div>
+  <% end %>
 </div>
 
