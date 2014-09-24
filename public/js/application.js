@@ -6,8 +6,12 @@ $(document).ready(function() {
       url: "/conjugate",
       type: "POST",
       data: data
-    }).success(function(response){
-      console.log(response)
+    }).success(function(verb){
+      appendVerb(verb)
     })
   })
 });
+
+function appendVerb(verb){
+  $('#result').html(verb)
+}
