@@ -5,30 +5,32 @@
   </header>
 
   <div class="row">
-    <form id="conj-form" role="form">
+    <form id="conj-form">
 
-      <div class="col-xs-4">
-        <label>Root 3</label>
-        <select class="form-control" name="root3">
-          <%= erb :'partials/_alphabet', :layout => false, :locals => { :selected  => @root1, :stuff => @stuff } %>
-        </select>
+      <div class="form-row">
+        <div class="col-xs-4">
+          <label>Root 3</label>
+          <select class="form-control" name="root3">
+            <%= erb :'partials/_alphabet', :layout => false, :locals => { :selected  => @root1, :stuff => @stuff } %>
+          </select>
+        </div>
+
+        <div class="col-xs-4">
+          <label>Root 2</label>
+          <select class="form-control" name="root2">
+            <%= erb :'partials/_alphabet', :layout => false, :locals => { :selected => @root2, :stuff => @stuff } %>
+          </select>
+        </div>
+
+        <div class="col-xs-4">
+          <label>Root 1</label>
+          <select class="form-control" name="root1">
+            <%= erb :'partials/_alphabet', :layout => false, :locals => { :selected => @root3, :stuff => @stuff } %>
+          </select>
+        </div>
       </div>
 
-      <div class="col-xs-4">
-        <label>Root 2</label>
-        <select class="form-control" name="root2">
-          <%= erb :'partials/_alphabet', :layout => false, :locals => { :selected => @root2, :stuff => @stuff } %>
-        </select>
-      </div>
-
-      <div class="col-xs-4">
-        <label>Root 1</label>
-        <select class="form-control" name="root1">
-          <%= erb :'partials/_alphabet', :layout => false, :locals => { :selected => @root3, :stuff => @stuff } %>
-        </select>
-      </div>
-
-      <div class="col-s-12 text-center">
+      <div class="col-s-12 text-center form-row">
         <label>Form</label>
         <select name="form" class="form-control">
           <option>I</option>
@@ -42,7 +44,7 @@
         </select>
       </div>
 
-      <div class="col-s-12 text-center">
+      <div class="col-s-12 text-center form-row">
         <label>Pronoun</label>
         <select name="pronoun" class="form-control">
           <option>I</option>
@@ -56,7 +58,7 @@
         </select>
       </div>
 
-      <div class="col-s-12 text-center">
+      <div class="col-s-12 text-center form-row">
         <label>Tense</label>
         <select name="tense" class="form-control">
           <option>Past</option>

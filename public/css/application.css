@@ -12,7 +12,6 @@ label {
 }
 
 select {
-  display: block;
   margin-bottom: 1.5em;
 }
 
@@ -20,3 +19,9 @@ select {
   margin-top: 1em;
   font-size: 3.5em;
 }
+
+.form-row {
+  margin: 0 3em;
+}
+
+
