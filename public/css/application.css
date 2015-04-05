@@ -3,8 +3,18 @@ body {
   font-weight: bolder;
 
 }
+
+.form-container {
+  width: 50%;
+  position: relative;
+  left: 25%;
+}
 .submit-button {
   margin-top: 3em;
+}
+
+.btn {
+  padding: 1em 3.5em;
 }
 
 label {
@@ -24,4 +34,22 @@ select {
   margin: 0 3em;
 }
 
+.form-control {
+  border-radius: 100px;
+}
 
+@media(max-width: 767px) {
+  .form-container {
+    width: 100%;
+    left: 0;
+  }
+  .row {
+    margin: 0;
+  }
+  .submit-button{
+    margin-top: 2em;
+  }
+  .col-xs-4 {
+    padding: 0 10px;
+  }
+}
