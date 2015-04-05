@@ -8,6 +8,7 @@ body {
   width: 50%;
   position: relative;
   left: 25%;
+  margin: 0;
 }
 .submit-button {
   margin-top: 3em;
@@ -28,6 +29,7 @@ select {
 #result {
   margin-top: 1em;
   font-size: 3.5em;
+  height: 3em;
 }
 
 .form-row {
@@ -36,6 +38,10 @@ select {
 
 .form-control {
   border-radius: 100px;
+}
+
+footer {
+  text-align: center;
 }
 
 @media(max-width: 767px) {
